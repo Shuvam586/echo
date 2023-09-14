@@ -142,8 +142,8 @@ dailyRows = () => {
 			let dm = el.datetime.split('-')[1]
 
 			let cond = el.conditions;
-			if (cond.length > 15) {
-				cond = cond.slice(0, 15) + '...';
+			if (cond.length > 11) {
+				cond = cond.slice(0, 11) + '...';
 			}
 			d = new Date(0);
 			d.setSeconds(el.datetimeEpoch);
