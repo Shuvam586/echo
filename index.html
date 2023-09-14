@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>echo</title>
+    <link rel="shortcut icon" href="./assets/echo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="nav">
+        <span id="navDate"></span>
+    </div>
+
+    <div class="main-card">
+        <div class="main-left">
+            <span class="mainleftdate" id="mainCardDate"></span>
+            <span class="mainlefttemp" id="mainCardTemp"></span>
+            <span class="mainleftplace" id="mainCardPlace" onclick="changePlace();"></span>
+        </div>
+        <div class="main-right"><img id="main-icon" src="assets/clear-day.svg" alt=""></div>
+    </div>
+
+    <div class="hourly-row" id="hourly-row">
+        
+    </div>
+
+    <div class="sun-info">
+        <div class="sun-left">
+            <span>
+                Sunrise
+            </span>
+            <img style="padding-inline: 5px; padding-right: 5px; width: 45px;" src="./assets/clear-day.svg" alt="">
+            <span id="sunrise-time"></span>
+        </div>
+        
+        <div class="sun-right">
+            <span>
+                Sunset
+            </span>
+            <img style="padding-inline: 3px; width: 45px;" src="./assets/clear-night.svg" alt="">
+            <span id="sunset-time"></span>
+        </div>
+    </div>
+
+    <div class="moon-info">
+
+        <div class="feels-like-info">
+            <span>
+                Feels like
+            </span>
+            <img style="padding-inline: 3px; width: 45px;" src="./assets/thermometer.svg" alt="">
+            <span id="feels-like"></span>
+        </div>
+
+        <div class="wind-info">
+            <span>
+                Wind
+            </span>
+            <img style="padding-inline: 3px; width: 45px;" src="./assets/windsock.svg" alt="">
+            <span id="wind-speed"></span>
+        </div>
+
+        <div class="pressure-info">
+            <span>
+                Pressure
+            </span>
+            <img style="padding-inline: 3px; width: 45px;" src="./assets/barometer.svg" alt="">
+            <span id="pressure"></span>
+        </div>
+
+        <div class="uv-info">
+            <span>
+                UV Index
+            </span>
+            <img id="uv-icon" style="padding-inline: 5px; padding-right: 5px; width: 45px;" src="./assets/uv-index.svg" alt="">
+            <span id="uv-index-info"></span>
+        </div>
+
+    </div>
+
+    <div id="daily-column" class="daily-column">
+        
+        
+    </div>
+
+</body>
+
+</html>

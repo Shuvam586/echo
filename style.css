@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --on-light: #181818;
+    --dark-background: #272727;
+    --cards-on-dark: #363636;
+
+    --on-dark: #f3f3f3;
+    --light-background: #f3f3f3;
+    --cards-on-light: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem 0 1rem 0;
+    background: var(--dark-background);
+    color: var(--on-dark);
+    font-family: 'Quicksand', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-weight: 600;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 2fr 150px 150px 4fr 6fr 8fr;
+}
+
+body > * {
+    margin-inline: 1rem;
+    border-radius: 15px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-card {
+    background-color: var(--cards-on-dark);
+    box-shadow: 0px 0px 20px #1818180d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.main-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-right {
+    min-width: 120px;
+    display: grid;
+    place-items: center;
+}
+
+.sun-info {
+    background-color: var(--cards-on-dark);
+    box-shadow: 0px 0px 20px #1818180d;
+
+}
+
+.moon-info {
+    background-color: var(--cards-on-dark);
+    box-shadow: 0px 0px 20px #1818180d;
+}
+
+.daily-column {
+    background-color: var(--cards-on-dark);
+    box-shadow: 0px 0px 20px #1818180d;
+
+}
+
+.sun-info {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+.sun-left, .sun-right {
+    display: flex;
+    align-items: center;
+}
+
+#mainCardTemp {
+    font-size: 4rem;
+    line-height: 70px;
+    font-weight: 400;
+}
+
+#mainCardDate {
+    padding-left: 2px;
+    font-size: 12px;
+}
+
+#mainCardPlace {
+    padding-left: 2px;
+    font-size: 15px;
+
+}
+
+.hourly-row {
+    display: flex;
+    overflow-x: scroll;
+    margin-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.hour-row {
+    width: 80px;
+    height: 150px;
+    background: var(--cards-on-dark);
+    border-radius: 15px;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    margin-right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hr-time {
+    font-size: 10px;
+    color: #ffffff61;
+}
+
+.hr-icon, .hr-icon > img {
+    width: calc(80px - 2rem);
+}
+
+.hr-icon {
+    padding-bottom: -10px;
+}
+
+.hr-precip, .hr-precip > img {
+    height: 30px;
+}
+
+.hr-precip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -13px;
+}
+
+.hr-precip span {
+    font-size: 12px;
+    color: #ffffff61;
+    margin-left: -5px;
+}
+
+.hr-temp {
+    font-size: 20px;
+}
+
+.daily-column {
+    padding: 1rem;
+}
+
+.daily-row {
+    height: 30px;
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: 1.2fr 2fr 1fr 3fr 1fr 1fr;
+}
+
+.daily-row > * {
+    display: grid;
+    place-items: center;
+}
+
+.dr-desc span,  .dr-date span {
+    width: 100%;
+    text-align: left;
+    overflow-x: scroll;
+}
+
+.dr-desc {
+    overflow-x: scroll;
+}
+
+.dr-icon {
+    padding-right: 12px;
+}
+
+.moon-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem;
+    font-size: 15px;
+}
+
+.moon-info > * {
+    display: flex;
+    align-items: center;
+}
+
+.feels-like-info, .pressure-info {
+    padding-right: 1rem;
+}
