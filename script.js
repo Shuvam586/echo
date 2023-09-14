@@ -87,8 +87,7 @@ hourRows = () => {
 	
 		let hourlyRow = document.getElementById('hourly-row')
 	
-		let d = new Date();
-		let h = d.getHours();
+		let h = Number(data.currentConditions.datetime.split(":")[0]);
 
 		hourlyRow.innerHTML = '';
 
