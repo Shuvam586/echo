@@ -89,6 +89,8 @@ hourRows = () => {
 	
 		let h = Number(data.currentConditions.datetime.split(":")[0]);
 
+		document.getElementById('mainCardDate').innerText = `${data.currentConditions.datetime.split(":")[0]}:${data.currentConditions.datetime.split(":")[1]}`;
+		
 		hourlyRow.innerHTML = '';
 
 		for (let i = h; i < hours.length; i++) {
