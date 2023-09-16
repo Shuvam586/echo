@@ -1,5 +1,6 @@
-place = "kolkata"
-url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${place}?unitGroup=metric&key=GU7E7GYACE72A64H77W6KRGS7&contentType=json`
+var place = "kolkata";
+var idk = 0;
+var url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${place}?unitGroup=metric&key=GU7E7GYACE72A64H77W6KRGS7&contentType=json`;
 
 var dayIndex = {
 	0: "Sunday", 1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thurday", 5: "Friday", 6: "Saturday"
@@ -193,11 +194,17 @@ dailyRows = () => {
 
 ddDown = (i) => {
 	st = document.getElementById(`dd-${i}`).style;
-	if (st.display == 'none') {
+	if (idk == 0) {
 		st.display = 'flex';
+		idk = idk + 1;
 	}
 	else {
-		st.display = 'none';
+		if (st.display == 'flex') {
+			st.display = 'none';
+		}
+		else {
+			st.display = 'flex';
+		}
 	}
 }
 
@@ -219,4 +226,4 @@ boxBox = (t) => {
 	miscInfo();
 }
 
-boxBox(false);
+boxBox(false, true);
