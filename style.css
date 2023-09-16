@@ -16,12 +16,23 @@
     box-sizing: border-box;
 }
 
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
 body {
     padding: 1rem 0 1rem 0;
     background: var(--dark-background);
     color: var(--on-dark);
     font-family: 'Quicksand', sans-serif;
-    width: 100vw;
+    width: 99vw;
     height: 100vh;
     font-weight: 600;
     display: grid;
@@ -29,7 +40,7 @@ body {
     grid-template-rows: 2fr 150px 150px 4fr 6fr 8fr;
 }
 
-body > * {
+body>* {
     margin-inline: 1rem;
     border-radius: 15px;
 }
@@ -86,7 +97,8 @@ body > * {
     font-size: 15px;
 }
 
-.sun-left, .sun-right {
+.sun-left,
+.sun-right {
     display: flex;
     align-items: center;
 }
@@ -111,9 +123,9 @@ body > * {
 .hourly-row {
     display: flex;
     overflow-x: scroll;
-    margin-right: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    margin: 0;
+    padding-left: 1rem;
+    border-radius: 0;
 }
 
 .hour-row {
@@ -136,7 +148,8 @@ body > * {
     color: #ffffff61;
 }
 
-.hr-icon, .hr-icon > img {
+.hr-icon,
+.hr-icon>img {
     width: calc(80px - 2rem);
 }
 
@@ -144,7 +157,8 @@ body > * {
     padding-bottom: -10px;
 }
 
-.hr-precip, .hr-precip > img {
+.hr-precip,
+.hr-precip>img {
     height: 30px;
 }
 
@@ -170,18 +184,43 @@ body > * {
 }
 
 .daily-row {
-    height: 30px;
+    /* height: 30px; */
     display: grid;
     font-size: 14px;
     grid-template-columns: 1.2fr 2fr 1fr 3fr 1fr 1fr;
+    padding-bottom: 0.25rem;
 }
 
-.daily-row > * {
+.daily-row:last-of-type {
+    padding-bottom: unset;
+}
+
+.daily-dropdown {
+    padding-bottom: 1.5rem;
+    display: flex;
+    gap: 20px;
+    width: calc(100vw - 5rem);
+    overflow-x: scroll;
+    display: none;
+
+    /* transition: display 0.5s ease-in-out; */
+}
+
+.dd-col {
+    width: 80px;
+}
+
+.dd-time {
+    font-size: 10px;
+}
+
+.daily-row>* {
     display: grid;
     place-items: center;
 }
 
-.dr-desc span,  .dr-date span {
+.dr-desc span,
+.dr-date span {
     width: 100%;
     text-align: left;
     overflow-x: scroll;
@@ -203,11 +242,12 @@ body > * {
     font-size: 15px;
 }
 
-.moon-info > * {
+.moon-info>* {
     display: flex;
     align-items: center;
 }
 
-.feels-like-info, .pressure-info {
+.feels-like-info,
+.pressure-info {
     padding-right: 1rem;
 }
